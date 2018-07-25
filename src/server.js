@@ -1,5 +1,5 @@
-import * as Express from 'express';
-import * as React from 'react';
+import express from 'express';
+import React from 'react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { renderToString } from 'react-dom/server';
@@ -12,9 +12,10 @@ import { render } from './isormorphic/render';
 import { configureStore } from './isormorphic/store';
 import { initState } from './modules';
 
-const app = Express();
+const app = express();
 
-app.use(Express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
+
 app.get('*', (req, res) => {
     
     const { store, history } = configureStore(

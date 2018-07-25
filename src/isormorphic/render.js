@@ -2,10 +2,7 @@
 import { RootState } from "../modules";
 import * as ReactHelmet from 'react-helmet';
 
-export const render = (content,
-                       state,
-                       header,
-                       styleTag) => {
+export const render = (content, state, header, styleTag) => {
     return `
         <!DOCTYPE html>
         <html lang="ja">
